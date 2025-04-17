@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  --theme--blue: #1b3cf5;
+  --theme--green: #51cd80;
+  --theme--darkgray: #3d454c;
+  --theme--lightgray: #ededed;
+  --theme--black: #000;
+  --theme--white: #fff;
+
+  --bRadius: 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  width: clamp(320px, 90%, 1280px);
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  background-color: var(--theme--lightgray);
+}
+h1 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.3;
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  line-height: 1.2;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 400;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+}
+.layout {
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+  gap: 1.6rem;
+  padding: 3rem 0;
+}
+.layout-aside {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: var(--bRadius);
+  background-color: var(--theme--white);
+}
+.layout-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  background-color: var(--theme--white);
+  border-radius: var(--bRadius);
+
+  .layout-header-intro {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .layout-header-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}
+.layout-main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/*
+  Aside
+*/
+
+.menu {
+  li {
+    padding: 0 1.5rem;
+
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+.active {
+  position: relative;
+  :before {
+    content: "";
+    top: 0;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-left: 3px solid var(--theme--blue);
+    background-color: #1b3cf526;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
+
+/*
+  Top data
+*/
+.top-data {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  .number-card {
+    flex: 1;
+    min-width: clamp(25rem, 30%, 30rem);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--theme--white);
+    border-radius: var(--bRadius);
+    padding: 2.5rem;
+    transition: 800ms;
+
+    .number-card__number {
+      color: var(--theme--blue);
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .number-card__concept {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.number-card:hover {
+  box-shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2);
+  transition: 800ms;
+}
+
+/*
+  Quick Actions
+*/
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.quick-actions__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card-block__top {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .content {
+    h3 {
+      font-size: 2rem;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.card-block {
+  flex: 1;
+  min-width: clamp(25rem, 30%, 30rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  background-color: var(--theme--white);
+  border-radius: var(--bRadius);
+  padding: 2.5rem;
+
+  .blue {
+    background-color: var(--theme--blue);
+    color: var(--theme--white);
+    transition: 800ms;
+  }
+}
+
+.blue:hover {
+  background-color: var(--theme--darkgray);
+  transition: 800ms;
+}
+
+/*
+  **
+    MEdia query: Mobile
+  **
+*/
+@media (max-width: 767px) {
+  .layout {
+    grid-template-areas:
+      "sidebar"
+      "header"
+      "main";
+  }
+  .layout-aside {
+    .logotipo {
+      text-align: center;
+    }
+    .menu {
+      display: none;
+    }
+  }
+  .layout-header {
+    .layout-header-intro {
+      text-align: center;
+    }
+    .layout-header-actions {
+      display: none;
+    }
+  }
+}
