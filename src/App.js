@@ -12,12 +12,11 @@ function App() {
       <Aside />
       <Header />
       <main className="layout-main">
-        <section className="top-data">
-          <Number number="120" concept="Total Contracts" />
+        <Number />
+        {/* <Number number="120" concept="Total Contracts" />
           <Number number="56" concept="Active Contracts" />
           <Number number="64" concept="Signed Contracts" />
-          <Number number="97,559 SAR" concept="Total Due Amount" />
-        </section>
+          <Number number="97,559 SAR" concept="Total Due Amount" /> */}
         <section className="quick-actions">
           <h2>Quick Actions</h2>
           <div className="quick-actions__cards">

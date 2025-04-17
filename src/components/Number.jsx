@@ -1,8 +1,23 @@
-export default function Number({ number, concept }) {
+// export default function Number({ number, concept }) {
+//   return (
+//     <div className="number-card">
+//       <span className="number-card__number">{number}</span>
+//       <p className="number-card__concept">{concept}</p>
+//     </div>
+//   );
+// }
+
+import { numberData } from "../data/numberData";
+
+export default function Number() {
   return (
-    <div className="number-card">
-      <span className="number-card__number">{number}</span>
-      <p className="number-card__concept">{concept}</p>
-    </div>
+    <section className="top-data">
+      {numberData.map((item) => (
+        <div className="number-card" key={item.id}>
+          <span className="number-card__number">{item.number}</span>
+          <p className="number-card__concept">{item.concept}</p>
+        </div>
+      ))}
+    </section>
   );
 }
