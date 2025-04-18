@@ -1,8 +1,9 @@
+import { numberData } from "./data/numberData";
+
 import Aside from "./components/Aside";
 import Header from "./components/Header";
 import Number from "./components/Number";
 import Card from "./components/Card";
-import Dialog from "./components/Dialog";
 
 import "./App.css";
 
@@ -12,7 +13,11 @@ function App() {
       <Aside />
       <Header />
       <main className="layout-main">
-        <Number />
+        <section className="top-data">
+          {numberData.map((item) => (
+            <Number key={item.id} {...item} />
+          ))}
+        </section>
         {/* <Dialog /> */}
         <section className="quick-actions">
           <h2>Quick Actions</h2>
