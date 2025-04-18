@@ -2,6 +2,7 @@ import Aside from "./components/Aside";
 import Header from "./components/Header";
 import Number from "./components/Number";
 import Card from "./components/Card";
+import Dialog from "./components/Dialog";
 
 import "./App.css";
 
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main className="layout-main">
         <Number />
+        {/* <Dialog /> */}
         <section className="quick-actions">
           <h2>Quick Actions</h2>
           <Card />

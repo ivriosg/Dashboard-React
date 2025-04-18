@@ -1,13 +1,13 @@
 import { cardData } from "../data/cardData";
-import Button from "./Button";
 import { SquarePlus } from "lucide-react";
+import Button from "./Button";
 
 export default function Card() {
   return (
     <div className="quick-actions__cards">
       {cardData.map((item) => {
         return (
-          <div className="card-block">
+          <div className="card-block" key={item.id}>
             <div className="card-block__top">
               <div className="content">
                 <h3>{item.title}</h3>
@@ -19,6 +19,7 @@ export default function Card() {
             </div>
             <div className="card-block--btn">
               <Button
+                clas={item.clas}
                 icon={<SquarePlus size={18} />}
                 showIcon={item.showIcon}
                 concept={item.buttonLabel}

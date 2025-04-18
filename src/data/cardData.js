@@ -1,6 +1,7 @@
 export const cardData = [
   {
     id: 1,
+    clas: "blue",
     title: "Create New Product",
     description: "Start a new product for SME",
     showIcon: true,
@@ -8,6 +9,7 @@ export const cardData = [
   },
   {
     id: 2,
+    clas: "blue",
     title: "Add Offer",
     description: "Add a special offer for SMEs",
     showIcon: true,
@@ -15,6 +17,7 @@ export const cardData = [
   },
   {
     id: 3,
+    clas: "blue",
     title: "Manage Discuounts",
     description: "View and update discounts",
     showIcon: true,
@@ -22,6 +25,7 @@ export const cardData = [
   },
   {
     id: 4,
+    clas: "blue",
     title: "Contracts",
     description: "Review all contracts",
     showIcon: false,
@@ -29,6 +33,7 @@ export const cardData = [
   },
   {
     id: 5,
+    clas: "blue",
     title: "View Packages",
     description: "Manage SME packages",
     showIcon: false,
@@ -36,6 +41,7 @@ export const cardData = [
   },
   {
     id: 6,
+    clas: "blue",
     title: "Organizations",
     description: "Manage SME organizations",
     showIcon: false,

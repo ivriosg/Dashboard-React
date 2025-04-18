@@ -1,6 +1,6 @@
-export default function Button({ icon, showIcon, concept }) {
+export default function Button({ clas, icon, showIcon, concept }) {
   return (
-    <button className="blue">
+    <button className={clas}>
       {showIcon && icon}
       {concept}
     </button>
